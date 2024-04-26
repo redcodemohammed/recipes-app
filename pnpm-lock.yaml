@@ -11,6 +11,9 @@ dependencies:
   '@ant-design/nextjs-registry':
     specifier: ^1.0.0
     version: 1.0.0(@ant-design/cssinjs@1.20.0)(antd@5.16.4)(next@14.2.2)(react-dom@18.2.0)(react@18.2.0)
+  '@next/env':
+    specifier: ^14.2.3
+    version: 14.2.3
   '@tanstack/react-query':
     specifier: ^5.32.0
     version: 5.32.0(react@18.2.0)
@@ -263,6 +266,10 @@ packages:
 
   /@next/env@14.2.2:
     resolution: {integrity: sha512-sk72qRfM1Q90XZWYRoJKu/UWlTgihrASiYw/scb15u+tyzcze3bOuJ/UV6TBOQEeUaxOkRqGeuGUdiiuxc5oqw==}
+    dev: false
+
+  /@next/env@14.2.3:
+    resolution: {integrity: sha512-W7fd7IbkfmeeY2gXrzJYDx8D2lWKbVoTIj1o1ScPHNzvp30s1AuoEFSdr39bC5sjxJaxTtq3OTCZboNp0lNWHA==}
     dev: false
 
   /@next/eslint-plugin-next@14.2.2:
