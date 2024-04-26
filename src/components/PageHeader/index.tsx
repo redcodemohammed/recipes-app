@@ -32,7 +32,7 @@ export function PageHeader({ children }: PageHeaderProps) {
 
   return (
     <>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
+      <Sider className="hidden md:block" trigger={null} collapsible collapsed={collapsed}>
         <div className="w-full flex flex-col text-white items-center justify-center my-4 gap-2">
           <h3 className=" text-2xl">NextJS</h3>
           {session?.user?.image && (
@@ -51,7 +51,7 @@ export function PageHeader({ children }: PageHeaderProps) {
         <Menu
           theme="dark"
           mode="inline"
-          defaultSelectedKeys={[path === '/add' ? '2' : '1']}
+          selectedKeys={[path === '/add' ? '2' : '1']}
           items={[
             {
               key: '1',
@@ -73,10 +73,14 @@ export function PageHeader({ children }: PageHeaderProps) {
             padding: 0
           }}>
           <div className="flex justify-between items-center h-full px-4">
-            {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-              className: 'trigger',
-              onClick: () => setCollapsed(!collapsed)
-            })}
+            <div className="flex-1">
+              <div className="hidden md:block">
+                {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+                  className: 'trigger',
+                  onClick: () => setCollapsed(!collapsed)
+                })}
+              </div>
+            </div>
             <Button
               onClick={() => {
                 logout()

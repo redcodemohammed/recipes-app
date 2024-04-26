@@ -118,6 +118,9 @@ export function AddEditForm({ edit, recipe }: AddEditFormProps) {
               <Button htmlType="button" onClick={() => form.resetFields()}>
                 Reset
               </Button>
+              <Button htmlType="button">
+                <Link href="/">View All Recipes</Link>
+              </Button>
             </Space>
           </Form.Item>
         </Form>
